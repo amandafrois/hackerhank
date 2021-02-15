@@ -1,0 +1,24 @@
+#-------------------------------------
+#Module Explained
+#-------------------------------------
+
+#Exercise:
+#This scenario is used to explain the usage of modules in Ansible.
+
+#For this you have to stop and start a service named ssh.
+
+#The task is to stop and start the service named ssh using the service module in Ansible.
+
+
+---
+
+- name: "Stop ssh"
+  service:
+    name: ssh
+    state: stopped
+
+- name: "start ssh"
+  service:
+    name: ssh
+    state: started
+

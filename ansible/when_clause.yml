@@ -1,0 +1,23 @@
+#-------------------------------------
+#Try-it-Out - When Clause
+#-------------------------------------
+
+#Using when clause to moving files.
+
+#Using Terminal:
+#create a directory called "test" into "/home/user/", using $mkdir test.
+
+
+#Using playbook tasks/main.yml:
+
+---
+
+  - name: checking if the file exists
+    stat:
+      path: /projects/challenge/fresco_when/simplefile.txt
+    register: stat_result
+
+  - name: moving file
+    command: mv /projects/challenge/fresco_when/simplefile.txt /home/user/test/simplefile.txt
+    when: stat_result.stat.exists
+ansible-playbook 

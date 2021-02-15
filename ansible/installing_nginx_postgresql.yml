@@ -1,0 +1,29 @@
+#-------------------------------------
+#Try It Out - Write A Playbook
+#-------------------------------------
+
+#Install nginx and postgresql using ansible playbook.
+
+
+---
+
+  - name: Install nginx
+    apt:
+      name: nginx
+      state: latest
+
+  - name: Start NGiNX
+    service:
+      name: nginx
+      state: started
+
+  - name: Install PostgreSQL
+    apt:
+      name: postgresql
+      state: latest
+
+  - name: Start PostgreSQL
+    service:
+      name: postgresql
+      state: started
+

@@ -1,0 +1,11 @@
+#-------------------------------------
+#Try-it-Out - Loops
+#-------------------------------------
+
+#Using loop to install apache2, sqlite3, and git in Ansible.
+
+
+---
+- name: "Install dependencies"
+  apt:
+    pkg: ['apache2', 'sqlite3', 'git']
